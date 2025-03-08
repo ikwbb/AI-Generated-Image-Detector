@@ -14,7 +14,6 @@ This project implements an ensemble model for detecting AI-generated images, com
    - [CLIP Feature Classification](#clip-feature-classification)
 4. [Model Ensembling](#model-ensembling)
 5. [Testing](#testing)
-6. [License](#license)
 
 
 ## Requirements
