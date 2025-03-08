@@ -145,9 +145,3 @@ def test(model, swin_model, test_dataset_path):
 - Ensure `trained_scaler.pkl`, `model.pth`, and `swin_model.pth` are in the working directory.
 
 
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-
