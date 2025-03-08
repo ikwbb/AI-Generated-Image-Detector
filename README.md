@@ -1,4 +1,3 @@
----
 
 # AI-Generated-Image-Detector
 
@@ -6,7 +5,6 @@
 
 This project implements an ensemble model for detecting AI-generated images, combining a fine-tuned Swin-Transformer and a CLIP-based feature classifier. The Swin-Transformer is fine-tuned for image classification, while CLIP extracts robust features that are classified using a custom neural network. The final prediction is an ensemble of both models' outputs.
 
----
 
 ## Table of Contents
 1. [Requirements](#requirements)
@@ -18,7 +16,6 @@ This project implements an ensemble model for detecting AI-generated images, com
 5. [Testing](#testing)
 6. [License](#license)
 
----
 
 ## Requirements
 
@@ -37,7 +34,7 @@ Additional dependencies (automatically installed with the above):
 
 Ensure you have a CUDA-enabled GPU for optimal performance, though the code supports CPU execution as well.
 
----
+
 
 ## Setup
 
@@ -58,7 +55,7 @@ Ensure you have a CUDA-enabled GPU for optimal performance, though the code supp
 
 2. **Pretrained Models**: The code uses pretrained weights for Swin-Transformer (`swinv2_small_window16_256`) and CLIP (`ViT-L/14@336px`), which are downloaded automatically via `timm` and `clip`.
 
----
+
 
 ## Reproduction
 
@@ -80,7 +77,7 @@ The Swin-Transformer is fine-tuned on the dataset with specific layers unfrozen 
 #### Why Largest Validation Loss?
 Validation accuracy reflects intra-domain performance, which may not generalize across domains. A model with slightly lower intra-domain accuracy (and higher loss) might generalize better in cross-domain scenarios.
 
----
+
 
 ### CLIP Feature Classification
 
@@ -109,7 +106,7 @@ CLIP (`ViT-L/14@336px`) extracts image features, which are then classified using
 #### Why Highest Accuracy?
 Since CLIP is not fine-tuned for this task, validation accuracy is assumed to correlate strongly with test set performance.
 
----
+
 
 ## Model Ensembling
 
@@ -120,7 +117,7 @@ The final prediction combines outputs from both models:
 
 See the [testing section](#testing) for implementation details.
 
----
+
 
 ## Testing
 
@@ -147,10 +144,10 @@ def test(model, swin_model, test_dataset_path):
 - Customize `data_loader` and `model` based on your dataset structure.
 - Ensure `trained_scaler.pkl`, `model.pth`, and `swin_model.pth` are in the working directory.
 
----
+
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+
